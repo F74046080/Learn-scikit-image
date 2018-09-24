@@ -10,3 +10,9 @@ $ conda install scikit-image
 ```bash
 $ pip install -U scikit-image
 ```
+## function
+### skimage.color
+### skimage.exposure
+
+## useful tool
+### data_dir
