@@ -11,7 +11,10 @@ $ conda install scikit-image
 $ pip install -U scikit-image
 ```
 
-## function
+## module
+
+### skimage.io
+
 ### skimage.color
 Do the color space conversion such as:
     1. RGB to HSV color space conversion. (``rgb2hsv(img)``)
@@ -22,9 +25,15 @@ Do the color space conversion such as:
 You can also use ``convert_colorspace(img, fromspace, tospace)`` to convert color space.
 
 ### skimage.exposure
-* ``exposure.histogram``  : histogram of image
-* ``exposure.equalize_hist`` : image after histogram equalization
+* Histogram equalization : Make the intensity distribution better of image. It can get higher contrast.
+[Histogram equalizatio ---wiki](https://en.wikipedia.org/wiki/Histogram_equalization)
+	* ``exposure.histogram``  : histogram of image
+	* ``exposure.equalize_hist`` : image after histogram equalization
+	
+* Gamma Correction : In human's vision, the brighteness to human is not in nonlinear. We should use gamma correction to make the brightness much linear in human sight.
+[Gamma Correction ---wiki](https://en.wikipedia.org/wiki/Gamma_correction)
+	* ``exposure.adjust_gamma(img, gamma_value)`` : Adjust gamma_value for image
+	* ``exposure.is_low_contrast(img)`` : To justify whether the image is in low contrast
 
-Histogram equalization : Make the intensity distribution better of image. It can get higher contrast.
-[wiki](https://en.wikipedia.org/wiki/Histogram_equalization)
 ### skimage.data_dir
+* data_dir : It is sample data directory under the absolute path where you setup skimage
